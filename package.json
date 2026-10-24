@@ -1,0 +1,25 @@
+{
+  "name": "mmm-homebridgedisplaycontrol",
+  "version": "1.0.0-alpha.1",
+  "description": "Presence-driven Raspberry Pi display control using Homebridge occupancy and motion sensors",
+  "author": "Rick Roach",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rroach3753/MMM-HomebridgeDisplayControl.git"
+  },
+  "homepage": "https://github.com/rroach3753/MMM-HomebridgeDisplayControl#readme",
+  "bugs": {
+    "url": "https://github.com/rroach3753/MMM-HomebridgeDisplayControl/issues"
+  },
+  "main": "MMM-HomebridgeDisplayControl.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check MMM-HomebridgeDisplayControl.js && node --check node_helper.js && node --check lib/config.js && node --check lib/homebridge.js && node --check lib/display.js && node --check lib/controller.js"
+  },
+  "license": "MIT",
+  "keywords": ["magicmirror", "homebridge", "raspberry-pi", "presence", "display"]
+}
