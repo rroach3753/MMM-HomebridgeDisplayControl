@@ -1,6 +1,8 @@
 # Security policy
 
-This project is in alpha. Security fixes target the latest alpha and main branch.
+Security fixes target the latest stable release and the main branch.
+Prereleases are intended for testing and should not be treated as supported
+production versions.
 
 ## Reporting
 

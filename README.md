@@ -4,8 +4,8 @@ A standalone MagicMirror module that controls the local Raspberry Pi's display
 using Homebridge occupancy and motion sensors. It is independent of any Govee
 status module.
 
-**Alpha release: v1.0.0-alpha.1.** Experimental; keep SSH/manual display recovery
-available. Wayland/labwc has been hardware-tested; X11 is unit-tested only.
+**Stable release: v1.0.0.** Keep SSH/manual display recovery available when
+configuring automation. Wayland/labwc has been hardware-tested; X11 is unit-tested only.
 
 ## Dependencies and external APIs
 
@@ -71,14 +71,14 @@ The declared minimum is **MagicMirror 2.38.0**, the version used for framework
 testing. Older versions have not been certified.
 
 1. Place this directory at `~/MagicMirror/modules/MMM-HomebridgeDisplayControl`.
-   To install this alpha from GitHub:
+   To install this release from GitHub:
 
    ```bash
    cd ~/MagicMirror/modules
-   git clone --branch v1.0.0-alpha.1 https://github.com/rroach3753/MMM-HomebridgeDisplayControl.git
+   git clone --branch v1.0.0 https://github.com/rroach3753/MMM-HomebridgeDisplayControl.git
    ```
 
-   This checks out the alpha tag, not a branch that receives automatic updates.
+   This checks out the release tag, not a branch that receives automatic updates.
    No npm dependencies are required.
 2. Install the command appropriate for your desktop if it is missing:
    `sudo apt install wlr-randr` for Wayland or
@@ -253,14 +253,30 @@ helper was also smoke-tested with the installed MagicMirror NodeHelper framework
 The mirror's configuration was not changed, and its initial display state was
 restored. X11 has not yet been tested on physical hardware.
 
+During installed operation, the running module observed live UniFi Protect
+presence detections and automatically disabled the physical HDMI output after
+both configured sensors remained clear for five minutes. This complements the
+controlled off/on and either-sensor wake tests above.
+
 ## Updating and removing
 
-Alpha releases are available on the
+Stable releases and prereleases are available on the
 [GitHub releases page](https://github.com/rroach3753/MMM-HomebridgeDisplayControl/releases).
 Review the [changelog](CHANGELOG.md) before upgrading. Preserve your private
 server environment outside the module directory and restart MagicMirror.
 For a tag-based installation, fetch tags and explicitly check out the desired
-release; do not expect `git pull` to upgrade a detached alpha tag.
+release; do not expect `git pull` to upgrade a detached release tag.
+
+For example, to upgrade an existing alpha installation to the stable release:
+
+```bash
+cd ~/MagicMirror/modules/MMM-HomebridgeDisplayControl
+git fetch origin --tags
+git switch --detach v1.0.0
+```
+
+Restart MagicMirror afterward using your normal service or process manager.
+Preserve any local modifications before switching versions.
 
 To remove the module, delete its entry from MagicMirror's configuration and
 restart MagicMirror before removing its directory. Remove unused `HBDC_*`

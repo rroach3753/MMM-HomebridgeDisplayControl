@@ -1,6 +1,6 @@
 {
   "name": "mmm-homebridgedisplaycontrol",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "Presence-driven Raspberry Pi display control using Homebridge occupancy and motion sensors",
   "author": "Rick Roach",
   "repository": {

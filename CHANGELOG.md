@@ -5,6 +5,25 @@ Versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-24
+
+### Released
+
+- Promote the alpha implementation to the first stable release with no runtime
+  behavior changes.
+- Update installation instructions and security support policy for stable use.
+
+### Verified
+
+- Installed on a Raspberry Pi running MagicMirror 2.38.0 with labwc.
+- Live UniFi Protect motion detections observed by the running module while
+  someone was in the hallway.
+- Automatic physical display shutoff after five continuous minutes with both
+  configured sensors clear, verified against the actual HDMI output state.
+- Existing automated coverage for either-sensor wake, unavailable-sensor safety,
+  display commands, configuration, and helper lifecycle.
+- X11 remains unit-tested only; physical X11 hardware validation is outstanding.
+
 ## [1.0.0-alpha.1] - 2026-10-23
 
 ### Added
