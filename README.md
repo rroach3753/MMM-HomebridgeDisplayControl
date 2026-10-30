@@ -231,8 +231,8 @@ display's current power state.
 ## Development and testing
 
 ```bash
-npm test
-npm run check
+node --run test
+node --run check
 ```
 
 Tests use Node's built-in test runner and require no installation.

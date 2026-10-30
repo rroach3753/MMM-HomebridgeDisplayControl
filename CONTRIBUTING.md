@@ -9,8 +9,8 @@ server-only credentials and automation policy.
 Use Node.js 22 or later. No npm dependencies are needed.
 
 ```bash
-npm test
-npm run check
+node --run test
+node --run check
 ```
 
 Add focused tests for behavior changes. Never run the live Pi test as part of
